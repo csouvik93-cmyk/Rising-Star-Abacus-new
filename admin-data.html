@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login | RST</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .login-container {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+        .login-box {
+            background: var(--card);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            max-width: 400px;
+            width: 100%;
+        }
+        .login-box h2 {
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        .login-box input {
+            text-align: center;
+            letter-spacing: 5px;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <h2>ADMIN ACCESS</h2>
+            <p style="color:#94a3b8; margin-bottom: 25px;">Enter Admin PIN to view Submissions.</p>
+            <input type="password" id="adminPin" placeholder="****" maxlength="4" required style="margin-bottom: 25px;">
+            <button class="btn btn-primary" style="width: 100%;" onclick="verifyPin()">ACCESS DASHBOARD</button>
+            <p id="message" style="color: #ec4899; margin-top: 15px; display: none;">Incorrect PIN. Try again.</p>
+        </div>
+    </div>
+
+    <script>
+        function verifyPin() {
+            const pinInput = document.getElementById('adminPin').value;
+            const message = document.getElementById('message');
+            message.style.display = 'none';
+
+            // WARNING: For security, use a long, complex PIN. 
+            // The value below must match the placeholder PIN you choose (or the DASH_PIN variable if using a serverless function)
+            const CORRECT_PIN = ""; // CHANGE THIS PIN LATER IN PRODUCTION
+
+            if (pinInput === CORRECT_PIN) {
+                // Redirects to Netlify Forms dashboard for the site 'sweet-syrniki-5f1858'
+                window.location.href = 'https://app.netlify.com/sites/sweet-syrniki-5f1858/forms'; 
+            } else {
+                message.style.display = 'block';
+                document.getElementById('adminPin').value = '';
+            }
+        }
+    </script>
+</body>
+</html>
