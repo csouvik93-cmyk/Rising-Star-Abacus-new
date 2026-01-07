@@ -1,19 +1,57 @@
-🚀 R-STAR TECH ACADEMY WEBSITE SETUP
-THIS REPOSITORY HOSTS THE OFFICIAL ADMISSION PORTAL FOR RISING STAR TECH ACADEMY. THE SITE IS BUILT USING HTML, CSS, JAVASCRIPT, AND NETLIFY FORMS TO ENSURE A SEAMLESS AND SECURE DATA COLLECTION PROCESS.
-KEY FEATURES
-NETLIFY FORMS INTEGRATION: SECURE AND SERVERLESS DATA SUBMISSION HANDLING.
-ADVANCED ADMISSION FORM: COLLECTS DETAILED STUDENT DATA INCLUDING PHOTOS AND GUARDIAN INFORMATION.
-ADMIN PIN PROTECTION: IN-SITE LOGIN FOR ACCESSING THE SUBMISSIONS DASHBOARD.
-RESPONSIVE DESIGN: OPTIMIZED FOR ALL DEVICES (MOBILE FIRST).
-GSAP ANIMATIONS: ENHANCED USER EXPERIENCE WITH SMOOTH SCROLL ANIMATIONS.
-SETUP AND DEPLOYMENT
-THIS PROJECT IS DESIGNED FOR MANUAL DEPLOYMENT ON NETLIFY.
-FILES: ENSURE ALL REQUIRED FILES (INDEX.HTML, ADMIN-DATA.HTML, SCRIPT.JS, STYLE.CSS) ARE IN THE ROOT FOLDER.
-DEPLOY: DRAG AND DROP THE ROOT FOLDER TO THE NETLIFY DEPLOYS TAB.
-🔒 ADMIN ACCESS
-THE ADMINISTRATOR DASHBOARD IS PROTECTED BY A PIN.
-ACCESS URL: NAVIGATE TO YOUR_SITE_URL/admin-data.html.
-DEFAULT PIN: THE DEFAULT PIN IS SET TO 1234 IN THE ADMIN-DATA.HTML FILE. CHANGE THIS IMMEDIATELY.
-VIEW DATA: AFTER ENTERING THE CORRECT PIN, YOU WILL BE REDIRECTED TO THE NETLIFY FORMS DASHBOARD TO VIEW ALL SUBMISSIONS.
-⚠️ IMPORTANT: FORM SUBMISSION LIMITATIONS
-FILE SIZE: DUE TO NETLIFY'S FREE TIER LIMITATIONS, THE TOTAL SIZE OF ALL UPLOADED FILES (PHOTOS, SIGNATURES, ID) IN ONE SUBMISSION MUST NOT EXCEED 10MB
+# 🚀 R-STAR TECH ACADEMY - ADMISSION PORTAL
+
+THIS DOCUMENT PROVIDES AN OVERVIEW AND SETUP GUIDE FOR THE RISING STAR TECH ACADEMY'S SERVERLESS ADMISSION PORTAL.
+
+---
+
+### 🌟 PROJECT OVERVIEW
+
+This is a modern, responsive, and secure admission portal designed to collect detailed student application data, including necessary documents (photos, ID proof), using Netlify's powerful serverless form features.
+
+**KEY TECHNOLOGIES USED:**
+
+* **Frontend:** HTML5, CSS3, JavaScript
+* **Design/UX:** GSAP (Scroll Animations)
+* **Backend:** Netlify Forms (Serverless Data Handling)
+
+---
+
+### 📋 FEATURES
+
+* **Detailed Application Form:** Collects comprehensive information (Address split into Village, P.S., District, etc., Guardian details).
+* **File Uploads:** Supports secure uploading of Student Photos and Guardian documents.
+* **Animated Design:** Uses GSAP for smooth and professional scroll animations.
+* **Admin Access Protection:** Implements a client-side PIN check for accessing the submissions dashboard.
+* **Dynamic Course List:** Includes updated course offerings (`ADIT + AI`, `DT`, `Tally`, etc.).
+
+---
+
+### ⚠️ IMPORTANT LIMITATIONS (NETLIFY FREE TIER)
+
+**FILE SIZE IS CRITICAL FOR SUCCESSFUL SUBMISSION.**
+
+* **Total Limit:** The combined size of all file uploads (Photo, Signature, ID) in a single application **MUST NOT EXCEED 10MB**.
+* **Failure:** Submissions with files larger than 10MB will result in a "Submission Failed" error.
+
+---
+
+### 🔑 ADMIN ACCESS AND SECURITY
+
+The Admin Panel is hidden and protected to ensure only authorized personnel can view the collected data.
+
+1.  **ACCESS URL:** Navigate to `YOUR_SITE_URL/admin-data.html`
+2.  **PIN VERIFICATION:** Enter the pre-defined Admin PIN.
+3.  **VIEW DATA:** Upon successful verification, you are redirected to the Netlify Forms dashboard for the site **`sweet-syrniki-5f1858`**.
+
+> **SECURITY NOTE:** The PIN (`1234` by default) is set in the JavaScript of the `admin-data.html` file. **IT IS HIGHLY RECOMMENDED TO CHANGE THIS PIN** to a complex value immediately after deployment.
+
+---
+
+### 🚀 DEPLOYMENT GUIDE
+
+This portal is optimized for deployment on Netlify.
+
+1.  **COLLECT FILES:** Ensure you have all required files (`index.html`, `admin-data.html`, `script.js`, `style.css`) in one folder.
+2.  **NETLIFY DEPLOY:** Log in to your Netlify account, go to the **"Deploys"** tab for your site, and **Drag & Drop** the project folder to initiate the build.
+3.  **FORM CHECK:** Verify that "Form detection is enabled" in the Netlify Settings.
+4.  
